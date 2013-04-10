@@ -35,8 +35,8 @@ final class Imagine implements ImagineInterface
         $v = $imagick->getVersion();
         list($version, $year, $month, $day, $q, $website) = sscanf($v['versionString'], 'ImageMagick %s %04d-%02d-%02d %s %s');
 
-        if (version_compare('6.2.9', $version) > 0) {
-            throw new RuntimeException('Imagick version 6.2.9 or higher is required');
+        if (version_compare('6.2.8', $version) > 0) {
+            throw new RuntimeException('Imagick version 6.2.8 or higher is required');
         }
     }
 
